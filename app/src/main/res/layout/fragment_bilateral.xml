@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Bilateral">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txvSigmaSpace"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Sigma space: "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/txvSigmaColor"
+            app:layout_constraintTop_toBottomOf="@+id/txvSigmaColor" />
+
+        <TextView
+            android:id="@+id/txvSigmaColor"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Sigma color: "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvD"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="60dp"
+            android:gravity="center"
+            android:text="D: "
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/edtSigmaColor"
+            app:layout_constraintTop_toTopOf="@+id/edtSigmaColor" />
+
+        <EditText
+            android:id="@+id/edtD"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:hint="10"
+            android:inputType="number"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/txvD"
+            app:layout_constraintTop_toTopOf="@+id/txvD" />
+
+        <EditText
+            android:id="@+id/edtSigmaColor"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:hint="250"
+            android:inputType="number"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/txvSigmaColor"
+            app:layout_constraintTop_toTopOf="@+id/txvSigmaColor" />
+
+        <EditText
+            android:id="@+id/edtSigmaSpace"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:hint="50"
+            android:inputType="number"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/txvSigmaSpace"
+            app:layout_constraintTop_toTopOf="@+id/txvSigmaSpace" />
+
+        <Button
+            android:id="@+id/btnBilateral"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Bilateral"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtSigmaSpace" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

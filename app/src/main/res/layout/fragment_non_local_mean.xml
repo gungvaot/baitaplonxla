@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.NonLocalMean">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txvSearchWindowSize"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Search Window Size: "
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/edtHcolor"
+            app:layout_constraintTop_toBottomOf="@+id/txvTemplateWindowSize" />
+
+        <TextView
+            android:id="@+id/txvTemplateWindowSize"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="60dp"
+            android:gravity="center"
+            android:text="Template Window Size: "
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/edtH"
+            app:layout_constraintTop_toTopOf="@+id/edtH" />
+
+        <TextView
+            android:id="@+id/txvH"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="H: "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvHcolor"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="H color: "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/txvH"
+            app:layout_constraintTop_toBottomOf="@+id/txvH" />
+
+        <EditText
+            android:id="@+id/edtHcolor"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:hint="10"
+            android:inputType="number"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/txvHcolor"
+            app:layout_constraintTop_toTopOf="@+id/txvHcolor" />
+
+        <EditText
+            android:id="@+id/edtH"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:hint="10"
+            android:inputType="number"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/txvH"
+            app:layout_constraintTop_toTopOf="@+id/txvH" />
+
+        <EditText
+            android:id="@+id/edtTextTemplate"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:hint="7"
+            android:inputType="number"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/txvTemplateWindowSize"
+            app:layout_constraintTop_toTopOf="@+id/txvTemplateWindowSize" />
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:hint="21"
+            android:inputType="number"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/txvSearchWindowSize"
+            app:layout_constraintTop_toTopOf="@+id/txvSearchWindowSize" />
+
+        <Button
+            android:id="@+id/btnNLM"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="NLM"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvSearchWindowSize" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
